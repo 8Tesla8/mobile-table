@@ -1,0 +1,24 @@
+.mobile-table {
+  overflow: auto;
+
+  .mobile-row {
+    width: 100%;
+    display: table;
+    table-layout: fixed;
+    border-spacing: 8px;
+
+    .mobile-column {
+      display: table-cell;
+      width: 145px;
+      height: 45px;
+      vertical-align: middle;
+      text-align: center;
+      box-shadow: 0px 4px 14px rgba(209, 209, 209, 1.5);
+      border-radius: 4px;
+    }
+
+    .fixed-row {
+      width: max-content;
+    }
+  }
+}

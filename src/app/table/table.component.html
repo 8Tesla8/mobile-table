@@ -1,0 +1,20 @@
+<p>
+  table works!
+</p>
+
+<div class="mobile-table" (scroll)="onTableScroll($event)">
+
+  <div *ngFor="let row of rows" class="mobile-row">
+
+    <div *ngIf="row.columns.length == 0" class="fixed-row"
+    [ngStyle]="{'padding-left.px': scrollLeftPosition}">
+      {{row.title}}
+    </div>
+
+
+    <div *ngFor="let column of row.columns" class="mobile-column">
+    <span> {{column.value}}</span>
+    </div>
+
+  </div>
+</div>
