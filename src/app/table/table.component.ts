@@ -11,6 +11,10 @@ export class TableComponent implements OnInit {
   public scrollLeftPosition = 0;
   public rows: Row[] = [];
 
+  public onTableScroll(event): void {
+    this.scrollLeftPosition = event.target.scrollLeft;
+  }
+
   ngOnInit() {
 
     this.rows.push({
@@ -21,9 +25,9 @@ export class TableComponent implements OnInit {
     this.rows.push({
       title: "",
       columns: [
-        { value: "11" },
-        { value: "12" },
-        { value: "13" }
+        { value: "21" },
+        { value: "22" },
+        { value: "23" }
       ]
     });
 
@@ -54,10 +58,6 @@ export class TableComponent implements OnInit {
         { value: "63" }
       ]
     });
-  }
-
-  public onTableScroll(event): void {
-    this.scrollLeftPosition = event.target.scrollLeft;
   }
 }
 
